@@ -1,0 +1,28 @@
+function fn(){
+    // console.log(x); //not hoisted yet temporal dead zone gives error
+    // let x = 5;
+    // console.log(x); 
+
+    console.log(x); //not hoisted yet temporal dead zone gives error
+    const x = 5;
+    console.log(x); 
+}
+
+fn(); 
+/*
+
+    console.log(x);
+                ^
+
+ReferenceError: Cannot access 'x' before initialization
+    at fn (D:\FrontendJourney\js\temporalDeadZone\tdz.js:4:17)
+    at Object.<anonymous> (D:\FrontendJourney\js\temporalDeadZone\tdz.js:9:1)
+    at Module._compile (node:internal/modules/cjs/loader:1706:14)
+    at Object..js (node:internal/modules/cjs/loader:1839:10)
+    at Module.load (node:internal/modules/cjs/loader:1441:32)
+    at Function._load (node:internal/modules/cjs/loader:1263:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)
+    at node:internal/main/run_main_module:36:49
+*/
